@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery Plugin Test01</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+		<link rel="stylesheet" href="pt-dropdown.css">
+    </head>
+    <body>
+		<h1>jQuery Plugin Test01</h1>
+		<hr>
+
+		<ul id="columns-table">
+			<li class="label">Columns Visibility</li>
+			<li class="checked"><a href="#">Link 1</a></li>
+			<li><a href="#">Link 2</a></li>
+			<li><a href="#">Link 3</a></li>
+			<li><a href="#">Link 4</a></li>
+			<li class="divider"></li>
+			<li class="noncheck"><a href="#">Link</a></li>
+		</ul>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
+		<script src="pt-dropdown.js"></script>
+		<script>
+			$("#columns-table").ptdropdown({
+				title: "Mi title",
+				icon: "fa-gear",
+				open: false,
+				checklist: true,
+				action: "close",
+				callback: function(e){
+					console.log('e: ', e);
+				}
+			});
+		</script>
+    </body>
+</html>
